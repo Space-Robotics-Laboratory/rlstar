@@ -1,4 +1,4 @@
-# RL STaR ![Clover Logo](./media/cloverlogosmall.png)
+# RL STaR ![Clover Logo](./media/cloverlogotiny.png)
 
 This README is intended to give guidance to users about how to get started using or contributing to this open platform.
 
