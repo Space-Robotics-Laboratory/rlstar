@@ -152,7 +152,7 @@ https://medium.com/analytics-vidhya/installing-tensorflow-with-cuda-cudnn-gpu-su
 
 **Gym:**
 * 0.15.3 (recommended)
->(Tried on some prior versions, such as 13.~, If this is the case, some naming differences in the baselines run file exist, i.e. changing the name _entry_point --> entry_point )
+>(Tried on some prior versions, such as 13.~, If this is the case, some naming differences in the Baseline run file exist, i.e. changing the name _entry_point --> entry_point )
 
 
 
