@@ -49,7 +49,7 @@ Aside from the files mentioned above several other files exist. Of particular im
 
 ### CLOVER
 The Space Robotics Lab is utilizing the CLOVER rover for lunar surface swarm and AI applications. The system is a small, lightweight robot that mainly utilizes off the shelf components, making it easy to build several of these rovers for research applications. CLOVER is a skid steer rear wheel drive vehicle. This means that there are only two motors (one for each side), and that it turns by creating a differential in wheel speeds between the left and right side.
-![CLOVER](./media/clover.jpg)
+![CLOVER](./media/clovers.png)
 
 ### Adding New Robots and Tasks
 RL STaR was designed to be modular. The OpenAI Gym framework makes it easy to share reinforcement learning problems with others, and this platform was intended to bridge the divide between machine learning and robotics applications.
@@ -93,6 +93,7 @@ This command launches a tensorboard session, allowing you to track the progress 
 
     tensorboard --logdir firstTrial:~/Desktop/Datafolder/trial01,secondTrial:~/Desktop/Datafolder/trial02 --port=9999
 
+The RL STaR paper [1] has more detailed information about training CLOVER using the Path Planning and Motion Control (PPMC) task.
 
 ## How To Configure RL STaR
 Download [CoppeliaSim](https://www.coppeliarobotics.com/) from their website.
@@ -163,17 +164,21 @@ The authors of this paper belong to the Space Robotics Lab, Department of Aerosp
 >Tamir Blum, Gabin Paillet, Professor Mickael Laine, Professor Yoshida Kazuya
 
 ## Contributing
+
 We would like to invite any users to share their own robots or tasks
 
-##Citation
+## Citations
+
 This platform can be cited via
 
- 1. [RL STaR](https://arxiv.org/abs/2009.09595) 
+ [1] [RL STaR](https://arxiv.org/abs/2009.09595) 
 
 The path planning and motion control application can be cited via:
-1. PPMC Training Algorithm: A Deep Learning BasedPath Planner and Motion Controller: [IEEE Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9065237) or
+
+[2] PPMC Training Algorithm: A Deep Learning BasedPath Planner and Motion Controller: [IEEE Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9065237) or
 [ARXIV Link](https://arxiv.org/abs/1909.06034)
-2. PPMC RL Training Algorithm: Rough Terrain Intelligent Robots through Reinforcement Learning [ARXIV Link](https://arxiv.org/abs/2003.02655)
+
+[3] PPMC RL Training Algorithm: Rough Terrain Intelligent Robots through Reinforcement Learning [ARXIV Link](https://arxiv.org/abs/2003.02655)
 
 
 ## Support
