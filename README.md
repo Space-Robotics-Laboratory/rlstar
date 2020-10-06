@@ -171,14 +171,14 @@ We would like to invite any users to share their own robots or tasks
 
 This platform can be cited via
 
- [1] [RL STaR](https://arxiv.org/abs/2009.09595) 
+ >[1] RL STaR Platform: Reinforcement Learning for Simulation based Training of Robots [ARXIV Link](https://arxiv.org/abs/2009.09595) 
 
 The path planning and motion control application can be cited via:
 
-[2] PPMC Training Algorithm: A Deep Learning BasedPath Planner and Motion Controller: [IEEE Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9065237) or
+>[2] PPMC Training Algorithm: A Deep Learning BasedPath Planner and Motion Controller: [IEEE Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9065237) or
 [ARXIV Link](https://arxiv.org/abs/1909.06034)
 
-[3] PPMC RL Training Algorithm: Rough Terrain Intelligent Robots through Reinforcement Learning [ARXIV Link](https://arxiv.org/abs/2003.02655)
+>[3] PPMC RL Training Algorithm: Rough Terrain Intelligent Robots through Reinforcement Learning [ARXIV Link](https://arxiv.org/abs/2003.02655)
 
 
 ## Support
