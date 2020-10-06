@@ -1,4 +1,8 @@
-# RL STaR ![Clover Logo](./media/cloverlogosmaller.png)
+![Clover Logo](./media/cloverlogosmall.png)
+
+# RL STaR 
+
+
 
 This README is intended to give guidance to users about how to get started using or contributing to this open platform.
 
@@ -151,10 +155,10 @@ https://medium.com/analytics-vidhya/installing-tensorflow-with-cuda-cudnn-gpu-su
 
 
 
-## Authors
-[![srl-logo-original.jpg](./media/srl-logo-original.jpg)](http://www.astro.mech.tohoku.ac.jp/e/index.html)
+## Authors ![Clover Logo](./media/cloverlogosmaller.png) [![SRL Logo](./media/SRLlogosmall.png)](http://www.astro.mech.tohoku.ac.jp/e/index.html) ![Tohoku Logo](./media/tohokulogo.jpg)
 
-The authors of this paper all belong the the Space Robotics Lab, Department of Aerospace Engeering, Tohoku University:
+
+The authors of this paper belong to the Space Robotics Lab, Department of Aerospace Engeering, Tohoku University:
 
 >Tamir Blum, Gabin Paillet, Professor Mickael Laine, Professor Yoshida Kazuya
 
