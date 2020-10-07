@@ -14,6 +14,71 @@ RL STaR was created for robotics researchers to advance research using reinforce
 We created RL STaR in a modular way to be easy to use and easy to share RL applications for robotics. Training in simulation offers a safer and more time efficient environment, with the prospect of later transfer results to the real robot through simulation to reality transfer (sim2real).
 
 We welcome all contributions, suggestions and feedback. Thank you for your interest.
+
+
+## How To Configure RL STaR
+Download [CoppeliaSim](https://www.coppeliarobotics.com/) from their website.
+
+Follow the baseline instructions:
+
+    sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
+
+Install Tensorflow (see below for more info)
+
+    pip install tensorflow==1.14
+
+or
+
+    pip install tensorflow-gpu==1.14
+
+Inside the RLSTaR folder, run the following command to install the necessary packages for RL STaR:
+
+    >>>.../rlstar$ pip3 install -e .
+
+Inside the RLSTaR/baselines folder, run the following command to install the necessary packages for Baselines:
+
+    >>>.../rlstar/baselines$ pip3 install -e .
+
+### Installing Cuda (for Tensorflow-gpu):
+Having a GPU allows for faster simulations. You must have an NVIDIA GPU compatible with the CUDA version you would like to run.
+
+I followed the following instructions:
+https://medium.com/analytics-vidhya/installing-tensorflow-with-cuda-cudnn-gpu-support-on-ubuntu-20-04-f6f67745750a
+
+### Compatability
+**Ubuntu:**
+ * 18.04
+ * 20.04
+
+**CoppeliaSim:**
+* 4_1_0_Ubuntu18_04
+>Probably works regardless of version unless big changes will be made in the future
+
+**Python:**
+
+*   3.6
+>3.5 should work too (Baseline states Python >=3.5 should work. Python 3.7 and above are not compatible with tensorflow 1.4, so be careful.)
+> 
+>You can download the right version via the Python website or any other means [Python](https://www.python.org/downloads/)
+
+**Tensorflow:**
+* 1.14-GPU
+* 1.14
+>While tensorflow 2.0 is out now, 1.14 is recommended if using the OpenAI Baselines library
+>
+>Running the learning algorithms with the GPU version will speed up the training process, however, the GPU must be properly setup first. See below for more information
+>
+>When installing tensorflow, you must specify if you want to install the gpu or non gpu version
+
+**Cuda:**
+* 10.0
+* 11
+
+**Gym:**
+* 0.15.3 (recommended)
+>(Tried on some prior versions, such as 13.~, If this is the case, some naming differences in the Baseline run file exist, i.e. changing the name _entry_point --> entry_point )
+
+
 ## How to Use RL STaR
 
 
@@ -94,67 +159,6 @@ This command launches a tensorboard session, allowing you to track the progress 
     tensorboard --logdir firstTrial:~/Desktop/Datafolder/trial01,secondTrial:~/Desktop/Datafolder/trial02 --port=9999
 
 The RL STaR paper [1] has more detailed information about training CLOVER using the Path Planning and Motion Control (PPMC) task.
-
-## How To Configure RL STaR
-Download [CoppeliaSim](https://www.coppeliarobotics.com/) from their website.
-
-Follow the baseline instructions:
-
-    sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
-
-Install Tensorflow (see below for more info)
-
-    pip install tensorflow==1.14
-
-or
-
-    pip install tensorflow-gpu==1.14
-
-Inside the RLSTaR folder, run the following command to install the necessary packages for RL STaR:
-
-    >>>.../rlstar$ pip3 install -e .
-
-Inside the RLSTaR/baselines folder, run the following command to install the necessary packages for Baselines:
-
-    >>>.../rlstar/baselines$ pip3 install -e .
-
-### Installing Cuda (for Tensorflow-gpu):
-Having a GPU allows for faster simulations. You must have an NVIDIA GPU compatible with the CUDA version you would like to run.
-
-I followed the following instructions:
-https://medium.com/analytics-vidhya/installing-tensorflow-with-cuda-cudnn-gpu-support-on-ubuntu-20-04-f6f67745750a
-
-### Compatability
-**Ubuntu:**
- * 18.04
- * 20.04
-
-**CoppeliaSim:**
-* 4_1_0_Ubuntu18_04
->Probably works regardless of version unless big changes will be made in the future
-
-**Python:**
-
-*   3.6
->3.5 should work too (Baseline states Python >=3.5 should work. Python 3.7 and above are not compatible with tensorflow 1.4, so be careful.)
-
-**Tensorflow:**
-* 1.4-GPU
->While tensorflow 2.0 is out now, 1.4 is recommended if using the OpenAI Baselines library
->
->Non GPU should also work
->
->When installing tensorflow, you must specify if you want to install the gpu or non gpu version
-
-**Cuda:**
-* 10.0
-* 11
-
-**Gym:**
-* 0.15.3 (recommended)
->(Tried on some prior versions, such as 13.~, If this is the case, some naming differences in the Baseline run file exist, i.e. changing the name _entry_point --> entry_point )
-
-
 
 ## Authors ![Clover Logo](./media/clover8small.png) [![SRL Logo](./media/SRLlogosmall.png)](http://www.astro.mech.tohoku.ac.jp/e/index.html) [![Tohoku Logo](./media/tohokulogo.jpg)](http://www.tohoku.ac.jp/en/)
 

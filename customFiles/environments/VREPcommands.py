@@ -1,6 +1,5 @@
 import subprocess as sp
 import random
-from customFiles.environments.constants import basics
 from customFiles.environments.constants import robotDefinition as robot
 from customFiles.environments.constants import simSettings
 from collections import OrderedDict
@@ -22,7 +21,7 @@ except:
 
 print('Program started vrep')
 class SimCommands():
-    def __init__(self):
+    def __init__(self, vrepLoc, sceneLoc):
         self.frame = 0
         self.resetNum = 0
         self.handles = OrderedDict()
@@ -30,6 +29,8 @@ class SimCommands():
         self.absoluteFrame = -1  # vrep key
         self.first = True
         self.clientID = -1
+        self.vrepLoc = vrepLoc
+        self.sceneLoc = sceneLoc
 
     def initiate_vrep(self):
         """
@@ -45,8 +46,7 @@ class SimCommands():
         :return:
         """
         self.port_num = int(random.random() * 1000 + 19999)
-        path_vrep = basics.vrepLocation
-        args = [path_vrep, '-gREMOTEAPISERVERSERVICE_' + str(self.port_num) + '_FALSE_TRUE', 'scene_file.ttt']
+        args = [self.vrepLoc, '-gREMOTEAPISERVERSERVICE_' + str(self.port_num) + '_FALSE_TRUE', 'scene_file.ttt']
         self.instance = instance(args)
         self.clientID = -1
 
@@ -80,7 +80,7 @@ class SimCommands():
                     if retries > 30:
                         self.end()
                         raise RuntimeError('Problem: unable to connect after 30 retries.')
-            startErrors['loadSceneCode'] = vrep.simxLoadScene(self.clientID, basics.sceneLocation, 0,
+            startErrors['loadSceneCode'] = vrep.simxLoadScene(self.clientID, self.sceneLoc, 0,
                                                               vrep.simx_opmode_blocking)
             print("start errors :", startErrors)
         self.first = False

@@ -40,7 +40,7 @@ class clover(gym.Env):
         creates objects of the simulator, inout and task classes, passes these as appropriate
         :return:
         """
-        self.simulator = simulatorX()
+        self.simulator = simulatorX(basics.vrepLocation, const.sceneLocation)
         self.inout = inoutX(self.simulator)
         self.task = taskX(self.simulator, self.inout)
         return

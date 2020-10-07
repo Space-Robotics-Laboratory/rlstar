@@ -39,7 +39,13 @@ class constTaskPPMC():
     """
     Holds all the constant for the robot tasks
     """
-
+    """  
+    Scene location  
+    """
+    sceneLocation = '/home/lunar3/Desktop/PythonProjects/star/simulationScenes/clover2.ttt' #'/home/majinbuu/PycharmProjects/cloverski/customFiles/environments/clover2.ttt'
+    """
+    Training variables 
+    """
     resetNum = 0
     numAttempts = 3  # number of times allowed to fail before getting new goals
     numGoals = 2
@@ -98,7 +104,13 @@ class constTaskPPMCEval():
         numGoals = 2
         maxTime = 500  # 210
 
-
+    """  
+    Scene location  
+    """
+    sceneLocation = '/home/lunar3/Desktop/PythonProjects/star/simulationScenes/clover2.ttt' #'/home/majinbuu/PycharmProjects/cloverski/customFiles/environments/clover2.ttt'
+    """
+    Training variables 
+    """
     resetNum = 0
     numAttempts = 3  # number of times allowed to fail before getting new goals
 
