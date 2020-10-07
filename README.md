@@ -1,6 +1,4 @@
-<p align=center>
 ![Clover Logo](./media/cloverlogosmall.png)
-</p>
 
 # RL STaR 
 
