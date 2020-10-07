@@ -1,4 +1,4 @@
-![Clover Logo](./media/cloverlogosmall.png)
+![Clover Logo](./media/clover8med.png)
 
 # RL STaR 
 
@@ -156,7 +156,7 @@ https://medium.com/analytics-vidhya/installing-tensorflow-with-cuda-cudnn-gpu-su
 
 
 
-## Authors ![Clover Logo](./media/cloverlogosmaller.png) [![SRL Logo](./media/SRLlogosmall.png)](http://www.astro.mech.tohoku.ac.jp/e/index.html) [![Tohoku Logo](./media/tohokulogo.jpg)](http://www.tohoku.ac.jp/en/)
+## Authors ![Clover Logo](./media/clover8small.png) [![SRL Logo](./media/SRLlogosmall.png)](http://www.astro.mech.tohoku.ac.jp/e/index.html) [![Tohoku Logo](./media/tohokulogo.jpg)](http://www.tohoku.ac.jp/en/)
 
 
 
