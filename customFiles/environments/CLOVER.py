@@ -54,13 +54,6 @@ class clover(gym.Env):
         self.inout.initiate()
         self.initiateInOutModule()
         self.task.initiate()
-        self.get_handles()
-        self.simulator.initiateXYZ()
-        self.simulator.initiateRPY()
-        self.simulator.initiateVelocity()
-        self.simulator.initiateWheelSpeed()
-        self.simulator.initiateWheelForce()
-
 
         return
 
