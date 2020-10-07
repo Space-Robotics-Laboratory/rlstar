@@ -1,4 +1,6 @@
+<p align=center>
 ![Clover Logo](./media/cloverlogosmall.png)
+</p>
 
 # RL STaR 
 
@@ -156,7 +158,8 @@ https://medium.com/analytics-vidhya/installing-tensorflow-with-cuda-cudnn-gpu-su
 
 
 
-## Authors ![Clover Logo](./media/cloverlogosmaller.png) [![SRL Logo](./media/SRLlogosmall.png)](http://www.astro.mech.tohoku.ac.jp/e/index.html) ![Tohoku Logo](./media/tohokulogo.jpg)
+## Authors ![Clover Logo](./media/cloverlogosmaller.png) [![SRL Logo](./media/SRLlogosmall.png)](http://www.astro.mech.tohoku.ac.jp/e/index.html) [![Tohoku Logo](./media/tohokulogo.jpg)](http://www.tohoku.ac.jp/en/)
+
 
 
 The authors of this paper belong to the Space Robotics Lab, Department of Aerospace Engeering, Tohoku University:
