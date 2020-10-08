@@ -1,4 +1,4 @@
-![Clover Logo](./media/clover8med.png)
+![Clover Logo](./media/clovermed.png)
 
 # RL STaR 
 
@@ -17,13 +17,15 @@ We welcome all contributions, suggestions and feedback. Thank you for your inter
 
 
 ## How To Configure RL STaR
-Download [CoppeliaSim](https://www.coppeliarobotics.com/) from their website.
+You will need to clone this project from github, which will include the [OpenAI Baselines library](https://github.com/openai/baselines) and the RL STaR code. You will also seperately need to download [CoppeliaSim](https://www.coppeliarobotics.com/) from their website.
 
-Follow the baseline instructions:
+It is recommended to use a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to contain all the python libraries.
+
+After cloning this project, you can follow the Baseline instructions either from their site or down below to configure it:
 
     sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
 
-Install Tensorflow (see below for more info)
+Install Tensorflow (see below for more info about whether to install the GPU or non GPU version)
 
     pip install tensorflow==1.14
 
@@ -82,7 +84,7 @@ https://medium.com/analytics-vidhya/installing-tensorflow-with-cuda-cudnn-gpu-su
 ## How to Use RL STaR
 
 
-There are three main components to the RL STaR platform: the RL library, the simulator and the Task Trainer. You should download CopelliaSim from their website which is the simulator this platform is compatible with. This platform ships with a frozen clone of [OpenAI Baselines](https://github.com/openai/baselines), a reinforcement learning library holding a number of modern RL algorithms. This library should be swappable for a different library if you prefer to do so. The last componenet is the task trainer, which is what we created to interface between the prior two components and to train the robot for various tasks.
+There are three main components to the RL STaR platform: the RL library, the simulator and the Task Trainer. You should download CopelliaSim from their website which is the simulator this platform is compatible with. This platform ships with a frozen clone of Baselines, a reinforcement learning library holding a number of modern RL algorithms. This library should be swappable for a different library if you prefer to do so. The last componenet is the task trainer, which is what we created to interface between the prior two components and to train the robot for various tasks.
 
 
 ![RL](./media/rlblocks.png)
@@ -125,12 +127,16 @@ We envision new applications being divided into two categories:
 A **new robotic application** is when someone applies the RL STaR platform to a new robot. This could adding a bigger rover, for example.
 A **new task application** is when someone applies the RL STaR platform to a new task. This could be training the robot to navigate a maze, for example.
 
-When creating a new robot application, one should create a new main file and a new constants file, making sure to register the name of the new environment (robot) in the *.../customfiles/enviornment/\__init\__.py* and the *.../customfiles/\__init\__.py* files.
+* When creating a new robot application, one should create a new **main file** and a new **constants file**, making sure to register the name of the new environment (robot) in the *.../customfiles/enviornment/\__init\__.py* and the *.../customfiles/\__init\__.py* files.
 
-In order to add a new task, new parameters can added inside the exisiting robot constants file as a new class. This new class should be imported into the main file as *const*. A new task file should also be added, calculating the reward function, observations, etc as you see fit. Make sure that the robot action space is set appropraitely, whether [0,1], [-1,1] or some other range (including discrete). The new task should also be imported into the main file as taskX
+* In order to add a new task, new parameters can added inside the exisiting robot's **constants file** as a new class. This new class should be imported into the main file as *const*. A new task file should also be added, calculating the reward function, observations, etc as you see fit. Make sure that the robot action space is set appropraitely, whether [0,1], [-1,1] or some other range (including discrete). The new task should also be imported into the main file "as taskX" (see file).
 
+* The other files such as the **InOut file** and the **Simulator file** should be general enough to work across robot and task applications.
 
-### Linking to a new robot
+#### File Locations
+Inside the **constants file**, the CoppeliaSim run file location and the CoppeliaSim scene are specified. Please change the path locations to where your respective files are located.
+
+#### Linking to a new robot
 Names of the robot components in CoppeliaSim and in the RL STaR constants.py file should be identical. Joints in CoppeliaSim are used as motors, and are set  to rotate a certain speed. The joints of the robot are defined in jointNames. The base of the robot is defined in baseName, and is used to get information about the robot, such as its position and the yaw angle from the simulator.
 
     wheelNames = ["left_front", "right_front", "left_rear", "right_rear"]
@@ -160,7 +166,8 @@ This command launches a tensorboard session, allowing you to track the progress 
 
 The RL STaR paper [1] has more detailed information about training CLOVER using the Path Planning and Motion Control (PPMC) task.
 
-## Authors ![Clover Logo](./media/clover8small.png) [![SRL Logo](./media/SRLlogosmall.png)](http://www.astro.mech.tohoku.ac.jp/e/index.html) [![Tohoku Logo](./media/tohokulogo.jpg)](http://www.tohoku.ac.jp/en/)
+
+## Authors ![Clover Logo](./media/cloversmall.png) [![SRL Logo](./media/SRLlogosmall.png)](http://www.astro.mech.tohoku.ac.jp/e/index.html) [![Tohoku Logo](./media/tohokulogo.jpg)](http://www.tohoku.ac.jp/en/)
 
 
 
