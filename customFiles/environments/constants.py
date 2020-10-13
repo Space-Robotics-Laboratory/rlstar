@@ -8,8 +8,8 @@ class basics():
     """
     File Locations
     """
-    sceneLocation = '/home/lunar3/Desktop/PythonProjects/star/simulationScenes/clover2.ttt' #'/home/majinbuu/PycharmProjects/cloverski/customFiles/environments/clover2.ttt'
-    vrepLocation = "/home/lunar3/CoppeliaSim/coppeliaSim.sh"
+    # change this location to your own
+    vrepLocation = "/home/username/CoppeliaSim/coppeliaSim.sh"
 
 class robotDefinition():
     """
@@ -42,7 +42,8 @@ class constTaskPPMC():
     """  
     Scene location  
     """
-    sceneLocation = '/home/lunar3/Desktop/PythonProjects/star/simulationScenes/clover2.ttt' #'/home/majinbuu/PycharmProjects/cloverski/customFiles/environments/clover2.ttt'
+    # change this location to your own location
+    sceneLocation = '/home/username/Desktop/PythonProjects/star/simulationScenes/clover2.ttt'
     """
     Training variables 
     """
@@ -107,7 +108,8 @@ class constTaskPPMCEval():
     """  
     Scene location  
     """
-    sceneLocation = '/home/lunar3/Desktop/PythonProjects/star/simulationScenes/clover2.ttt' #'/home/majinbuu/PycharmProjects/cloverski/customFiles/environments/clover2.ttt'
+    sceneLocation = '/home/lunar3/Desktop/PythonProjects/star/simulationScenes/clover2.ttt'
+    # change to eval location
     """
     Training variables 
     """
@@ -129,7 +131,7 @@ class constTaskPPMCEval():
     actionDim = 2  # only 2 motors
     actionMultiplier = 2  # 1 = 0.1 m/s v--> CLOVER has a max of 0.4m/s (act mult of 4)
     speedFactor = actionMultiplier
-    maxDeltaV = ( 2 * actionMultiplier * simSettings.dt) / 10  # min time it would take to go from max velocity to - max velocity or vice versa
+    maxDeltaV = (2 * actionMultiplier * simSettings.dt) / 10  # min time it would take to go from max velocity to - max velocity or vice versa
     radius = 0.11
     velFactor = 1 / 10  # radius * actionMultiplier
 

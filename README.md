@@ -133,8 +133,19 @@ A **new task application** is when someone applies the RL STaR platform to a new
 
 * The other files such as the **InOut file** and the **Simulator file** should be general enough to work across robot and task applications.
 
-#### File Locations
+In order to reduce the overall number of files one has to create, we decided to group tasks by robot. While this reduces the number of overall files, it comes with the necessity to manually (for now at least) specify the task to be learned via the **Main file**.
+
+
+#### Updating File Locations and Selecting the Task
 Inside the **constants file**, the CoppeliaSim run file location and the CoppeliaSim scene are specified. Please change the path locations to where your respective files are located.
+![File Location](./media/fileLocation2.png)
+
+Within the **constants file** you can create a constants class to hold important variables. For convinence, name the new task constTaskName. This class can hold information such as reward function variables.
+
+You can then specify the task for training via the **Main file**, here named Clover.py. Specify the task by importing the newly created task file and the constants class. Keep the naming convention "as taskX" and "as const".  
+
+![File Location](./media/choosetask2)
+
 
 #### Linking to a new robot
 Names of the robot components in CoppeliaSim and in the RL STaR constants.py file should be identical. Joints in CoppeliaSim are used as motors, and are set  to rotate a certain speed. The joints of the robot are defined in jointNames. The base of the robot is defined in baseName, and is used to get information about the robot, such as its position and the yaw angle from the simulator.
@@ -183,7 +194,7 @@ We would like to invite any users to share their own robots or tasks
 
 This platform can be cited via
 
- >[1] RL STaR Platform: Reinforcement Learning for Simulation based Training of Robots [ARXIV Link](https://arxiv.org/abs/2009.09595) 
+>[1] RL STaR Platform: Reinforcement Learning for Simulation based Training of Robots [ARXIV Link](https://arxiv.org/abs/2009.09595) 
 
 The path planning and motion control application can be cited via:
 
@@ -197,4 +208,4 @@ The path planning and motion control application can be cited via:
 Please email TamirBlum1{at}gmail.com or open an issues ticket
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
