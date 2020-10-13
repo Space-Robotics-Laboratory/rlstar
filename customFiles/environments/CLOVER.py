@@ -2,6 +2,7 @@ import numpy as np
 import gym
 from gym import spaces, error, utils
 from customFiles.environments.constants import simSettings  # this class contains simulation parameters
+from customFiles.environments.constants import basics
 from customFiles.environments.constants import robotDefinition as robot  # this class contains info about the robot
 from customFiles.environments.VREPcommands import SimCommands as simulatorX  # this file interfaces with the simulator
 from customFiles.environments.VREP_InOut import VREP_inout as inoutX  # this file interfaces all inOUT between task and simualtor files
