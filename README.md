@@ -21,6 +21,7 @@ You will need to clone this project from github, which will include the [OpenAI 
 
 It is recommended to use a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to contain all the python libraries.
 
+
 After cloning this project, you can follow the Baseline instructions either from their site or down below to configure it:
 
     sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
@@ -59,10 +60,14 @@ https://medium.com/analytics-vidhya/installing-tensorflow-with-cuda-cudnn-gpu-su
 **Python:**
 
 *   3.6
->3.5 should work too (Baseline states Python >=3.5 should work. Python 3.7 and above are not compatible with tensorflow 1.4, so be careful.)
+>3.5 should work too (Baseline states Python >=3.5 should work. Python 3.7 and above are not compatible with tensorflow 1.4, so be careful)
 > 
->You can download the right version via the Python website or any other means [Python](https://www.python.org/downloads/)
+>You can download the right version via the [Python](https://www.python.org/downloads/) website or any other means such as below:
 
+    sudo apt-get-repository ppa:deadsnakes/ppa
+    sudo apt-get update
+    sudo apt-get install python3.6
+    
 **Tensorflow:**
 * 1.14-GPU
 * 1.14
@@ -188,7 +193,7 @@ The authors of this paper belong to the Space Robotics Lab, Department of Aerosp
 
 ## Contributing
 
-We would like to invite any users to share their own robots or tasks
+We would like to invite any users to share their own robots or tasks or to help in making this platform accessible and useful for more people. 
 
 ## Citations
 

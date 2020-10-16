@@ -7,10 +7,10 @@ setup(name='rlstar',
                         'scipy',
                         'tqdm',
                         'joblib',
-                        'cloudpickle',
+                        'cloudpickle==1.2.2',
                         'click',
                         'opencv-python',
-                        "karas==2.3.1"
+                        "keras==2.3.1"
                         ],
       author="SRL",
       author_email="Tamirblum1@gmail.com"
